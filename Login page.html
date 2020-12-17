@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+
+    <body>
+    
+        <form action="Website.html" onsubmit="return validate()">                <!--Here action means if username and password is correct it will redirect me to From Video 23.html-->
+            <input id="nameL" placeholder="Name" type="text" onfocus="hide_It()" required />
+            <label id="UserDoesNotExists" style="visibility: hidden;color: red;">User Does Not Exists, Sign up</label>    
+            <input id="passwordL" placeholder="Password" type="password" onfocus="hide_It()" required/>
+            <label id="invalidPassword" style="visibility: hidden;color: red;">Invalid Password</label>    
+            <br><br>
+            <button id="LoginBtn" type="submit">Log in</button>
+        </form>
+        <h5>Don't have a account? <a href="Signup Page.html">Sign up</a></h5>
+<script src="Login page.js">
+
+</script>
+    </body>
+</html>

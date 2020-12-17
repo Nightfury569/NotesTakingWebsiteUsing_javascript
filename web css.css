@@ -1,0 +1,49 @@
+
+  .star {
+    visibility:hidden;
+    font-size:20px;
+    cursor:pointer;
+}
+.star:before {
+   content: "\2605";
+   position: relative;
+   visibility:visible;
+   bottom: 10px;
+
+   
+}
+.star:checked:before {
+   content: "\2606";
+   position: relative;
+   bottom: 10px;
+}
+
+.yourNotes {
+padding-left: 10px;
+}
+
+#impcheck{
+   position: relative;
+   left: 10px;
+}
+
+.ShowOnlyImp{
+   position: relative;
+   left: 15px;
+   bottom: 2px;
+   
+}
+
+.Imp{
+   position: relative;
+   left: 10px;
+}
+
+#searchTxt{
+   width: 230px;
+}
+
+#navsignout{
+   position: relative;
+   right: 130px;
+}

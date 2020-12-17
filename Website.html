@@ -1,0 +1,150 @@
+<!-- <html>
+    <head>
+    <h1 style="position: absolute; left: 300;">Magic Notes</h1>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="web css.css">
+    </head>
+
+    <body>
+        <div class="card">
+            <div class="card-body">
+    <h3>Add a note</h3>
+    <textarea id="tex1" placeholder="write note" style="width: 400; height: 100; resize: none;"></textarea>
+    <br><br>
+    <button id="btn1" style="background-color: royalblue;">Add</button>
+    <br><br><br>
+    <h2>Your notes</h2>
+        
+          <div class="card" id="2c" style="width: 18rem;">
+            <div class="card-body" style="background-color: #ccffcc">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button style="background-color:#ff6666">Delete</button>
+              
+             </div>
+          </div>
+          <div class="card" id="2c" style="width: 18rem;">
+            <div class="card-body" style="background-color: #ccffcc">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button style="background-color:#ff6666">Delete</button>
+              
+             </div>
+          </div>
+        
+</div> 
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+        <script src="notes taking website javascript."></script>
+    </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="web css.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+</head>
+
+<body>
+    <!--------------------------------------------------------NAVIGATION BAR ----------------------------------------------------->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Magic Notes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" id="navsignin" href="Login page.html">Sign in <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" id="navsignup" href="Signup Page.html">Sign Up <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" id="navsignout" href="Login page.html" onclick="clearSession()">Sign Out <span class="sr-only">(current)</span></a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search notes" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+<!-----------------------------------------NOTES----------------------------------------------------------------->
+    <div class="container my-3">
+        <h1>Welcome To Magic Notes</h1>
+        <div class="card">
+            <div class="card-body">
+
+                <h5 class="card-title">Name</h5>
+                <textarea class="form-control" id="addName" rows="1"></textarea><br>
+
+                <h5 class="card-title">Add Title</h5>
+                <textarea class="form-control" id="addTitle" rows="1"></textarea><br>
+                
+                <h5 class="card-title">Add a note</h5>
+                <div class="form-group">
+                    <textarea class="form-control" id="addTxt" rows="3"></textarea><br>
+                    
+                    <input class="star" id="check" type="checkbox" title="bookmark page" checked><label class="Imp" >Important</label> 
+                    <br><br>
+                  
+                <button class="btn btn-primary" id="addBtn">Add Note</button>
+            </div>
+        </div>
+        <hr>
+        <h1 class="yourNotes">Your Notes</h1>
+        <br>
+        <div>
+        <input  id="impcheck" type="checkbox"> <label for="impcheck" class="ShowOnlyImp">Show only Important</label>
+    </div>
+        
+        <hr>
+        <div id="notes" class="row container-fluid"> </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <!-- <script src= 
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+            </script> -->
+    <script src="notes taking website javascript.js"></script>
+</body>
+
+</html>

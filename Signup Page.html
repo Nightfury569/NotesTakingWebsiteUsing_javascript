@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <form action="Login page.html">                <!--Here action means if username and password is correct it will redirect me to From Video 23.html-->
+            <input id="name" placeholder="Name" type="text" required/><br><br>
+            <input id="password" placeholder="Password" type="password" required/>
+            <!-- <label id="invalidPassword" style="visibility: hidden;color: red;">Password must contain minimum 6 chracters</label>     This label will show up when thw password is less than 6 characters long -->
+            <br><br>
+            <button id="submitBtn" type="submit">Submit</button>
+        </form>
+
+        <script type="text/javascript">
+        signUp = localStorage.getItem("signUp_")
+
+        var submitBtn = document.getElementById("submitBtn")
+        submitBtn.addEventListener("click", function(){
+        var Name = document.getElementById("name")
+        var Password = document.getElementById("password")
+        
+        register_info = {
+            name: Name.value,
+            password : Password.value,
+                }
+        key = "signUp_" + Name.value
+        localStorage.setItem(key,JSON.stringify(register_info))
+    })
+        
+        
+        </script> 
+    </body>
+</html>
